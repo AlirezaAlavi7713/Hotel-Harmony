@@ -1,0 +1,187 @@
+.emp {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.emp__container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.emp__eyebrow {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.emp__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.emp__subtitle {
+    margin: 10px 0 0 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.emp__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.emp__headerActions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.emp__filter {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0 40px 0 12px;
+    height: 44px;
+    min-width: 160px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b6b6b' d='M1.41.59 6 5.17 10.59.59 12 2l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 8px;
+}
+
+.emp__filter:focus {
+    outline: none;
+    border-color: #d1d5db;
+}
+
+.emp__muted {
+    margin-top: 16px;
+    color: #6b7280;
+}
+
+.emp__error {
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.emp__toast {
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d1fae5;
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.emp__list {
+    margin-top: 18px;
+    display: grid;
+    gap: 16px;
+}
+
+.emp__card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.emp__cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.emp__name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.emp__meta {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.emp__badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.emp__badge--admin {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.emp__badge--employe {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.emp__actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.emp__btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.emp__btn:hover {
+    opacity: 0.9;
+}
+
+.emp__btn--primary {
+    background: #21b865;
+    color: #ffffff;
+    border: none;
+}
+
+.emp__btn--danger {
+    background: #111827;
+    color: #ffffff;
+    border: none;
+}
+
+@media (max-width: 700px) {
+    .emp__header {
+        flex-direction: column;
+    }
+
+    .emp__headerActions {
+        width: 100%;
+    }
+
+    .emp__filter,
+    .emp__btn {
+        width: 100%;
+    }
+}

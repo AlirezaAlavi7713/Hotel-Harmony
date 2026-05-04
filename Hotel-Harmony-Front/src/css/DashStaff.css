@@ -1,0 +1,221 @@
+.staff {
+    background: #ffffff;
+    padding: clamp(18px, 3vw, 34px) 0;
+}
+
+.staff__container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+    padding: clamp(18px, 3vw, 28px);
+}
+
+.staff__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.staff__eyebrow {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.staff__title {
+    margin: 0;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 500;
+    color: #111827;
+}
+
+.staff__subtitle {
+    margin: 10px 0 0 0;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.staff__filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.staff__search {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0 12px;
+    height: 44px;
+    min-width: 220px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.staff__select {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0 40px 0 12px;
+    height: 44px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 150px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b6b6b' d='M1.41.59 6 5.17 10.59.59 12 2l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 8px;
+}
+
+.staff__search:focus,
+.staff__select:focus {
+    outline: none;
+    border-color: #d1d5db;
+}
+
+.staff__muted {
+    margin: 16px 0 0 0;
+    color: #6b7280;
+}
+
+.staff__error {
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.staff__toast {
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d1fae5;
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.staff__list {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.staff__card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.staff__cardTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.staff__cardTitle {
+    margin: 0;
+    color: #111827;
+    font-weight: 600;
+}
+
+.staff__status {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    background: #f9fafb;
+}
+
+.staff__status--en_attente {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.staff__status--confirmee {
+    background: #39ffa3;
+    color: #111827;
+}
+
+.staff__status--annulee {
+    background: #ec060682;
+    color: #111827;
+}
+
+.staff__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.staff__label {
+    margin: 0;
+    font-size: 12px;
+    color: #6b7280;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.staff__value {
+    margin: 6px 0 0 0;
+    color: #111827;
+}
+
+.staff__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.staff__btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.staff__btn:hover {
+    opacity: 0.9;
+}
+
+.staff__btn--danger {
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.staff__btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .staff__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff__search,
+    .staff__select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+:root {
+  --hh-bg: #f6f1e8;
+  --hh-surface: #fffdf8;
+  --hh-surface-strong: #ffffff;
+  --hh-ink: #1c1712;
+  --hh-muted: #6e6257;
+  --hh-line: #e6dccf;
+  --hh-accent: #b68a52;
+  --hh-accent-dark: #8e6738;
+  --hh-shadow: 0 18px 45px rgba(54, 39, 24, 0.08);
+  --hh-radius-lg: 24px;
+  --hh-radius-md: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--hh-ink);
+  background:
+    radial-gradient(circle at top left, rgba(182, 138, 82, 0.08), transparent 26%),
+    linear-gradient(180deg, #fbf7f1 0%, #f6f1e8 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}

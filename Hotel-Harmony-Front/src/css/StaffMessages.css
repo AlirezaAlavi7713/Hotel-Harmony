@@ -1,0 +1,199 @@
+.staffMessages {
+    padding: 40px 0;
+}
+
+.staffMessages__container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.staffMessages__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.staffMessages__muted {
+    color: #6b7280;
+}
+
+.staffMessages__error {
+    color: crimson;
+    margin-bottom: 16px;
+}
+
+/* Card */
+.staffMessages__card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    background: #ffffff;
+    margin-bottom: 16px;
+}
+
+.staffMessages__cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.staffMessages__subject {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Badges */
+.staffMessages__badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.staffMessages__badge--unread {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.staffMessages__badge--read {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* ✅ Nouveau: badge replied */
+.staffMessages__badge--replied {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.staffMessages__meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.staffMessages__message {
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+/* ✅ actions row (Mark as read / Reply) */
+.staffMessages__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+/* Buttons */
+.staffMessages__btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+}
+
+.staffMessages__btn:hover {
+    opacity: 0.9;
+}
+
+.staffMessages__btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ✅ bouton "primary" pour Reply/Save */
+.staffMessages__btn--primary {
+    background: #21b865;
+    color: #ffffff;
+}
+
+/* ✅ Reply affichée (message déjà répondu) */
+.staffMessages__reply {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+}
+
+.staffMessages__replyTitle {
+    margin: 0 0 6px 0;
+    font-weight: 700;
+    font-size: 13px;
+    color: #111827;
+}
+
+.staffMessages__replyText {
+    margin: 0;
+    line-height: 1.6;
+    color: #111827;
+}
+
+/* ✅ Reply box (textarea + buttons) */
+.staffMessages__replyBox {
+    margin-top: 12px;
+}
+
+.staffMessages__textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.staffMessages__textarea:focus {
+    border-color: #111827;
+}
+
+.staffMessages__replyActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.staffMessages__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.staffMessages__back {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.staffMessages__back:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .staffMessages__card {
+        padding: 16px;
+    }
+
+    .staffMessages__title {
+        font-size: 24px;
+    }
+
+    .staffMessages__btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,217 @@
+.staffRooms {
+    padding: 40px 0;
+}
+
+.staffRooms__container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.staffRooms__filter {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0 40px 0 12px;
+    height: 44px;
+    background: #ffffff;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 150px;
+    min-width: 150px;
+    font-family: inherit;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b6b6b' d='M1.41.59 6 5.17 10.59.59 12 2l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 8px;
+}
+
+.staffRooms__filter:focus {
+    border-color: #d1d5db;
+}
+
+.staffRooms__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.staffRooms__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ✅ grid responsive (cartes) */
+.staffRooms__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+
+/* ✅ carte premium */
+.staffRooms__card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 18px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.staffRooms__card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.09);
+    border-color: #d1d5db;
+}
+
+/* top */
+.staffRooms__cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.staffRooms__cardTop h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ✅ badge statut (on cible juste le span existant) */
+.staffRooms__cardTop span {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #111827;
+    text-transform: lowercase;
+}
+
+/* infos */
+.staffRooms__card p {
+    margin: 6px 0;
+    color: #374151;
+    font-size: 14px;
+}
+
+/* actions */
+.staffRooms__actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+/* ✅ boutons stylés sans ajouter de classes */
+.staffRooms__actions button {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 120ms ease, transform 120ms ease, border-color 120ms ease;
+}
+
+.staffRooms__actions button:hover {
+    background: #f9fafb;
+    transform: translateY(-1px);
+    border-color: #d1d5db;
+}
+
+.staffRooms__actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+/* ✅ bouton disable un peu plus "danger" sans changer ton JSX
+-> on cible le 2e bouton (Disable/Enable) */
+.staffRooms__actions button:nth-child(2) {
+    background: #fff1f2;
+    border-color: #fecdd3;
+    color: #9f1239;
+}
+
+.staffRooms__actions button:nth-child(2):hover {
+    background: #ffe4e6;
+}
+
+/* toast */
+.staffRooms__toast {
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #ecfdf5;
+    border: 1px solid #d1fae5;
+    color: #065f46;
+}
+
+.staffRooms__headerActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.staffRooms__addBtn {
+    border: 1px solid #d1fae5;
+    background: #ecfdf5;
+    color: #065f46;
+    min-height: 44px;
+    padding: 0 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.staffRooms__addBtn:hover {
+    filter: brightness(0.98);
+}
+
+.staffRooms__status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Active = même couleur que confirmee */
+.staffRooms__status.active {
+    background: #39ffa3;
+    color: #000000;
+}
+
+/* Disabled = même couleur que annulee */
+.staffRooms__status.desactivee {
+    background: #ec060682;
+    color: #000000;
+}
+
+@media (max-width: 700px) {
+    .staffRooms__list {
+        grid-template-columns: 1fr;
+    }
+
+    .staffRooms__header {
+        align-items: flex-start;
+    }
+
+    .staffRooms__headerActions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .staffRooms__filter,
+    .staffRooms__addBtn {
+        width: 100%;
+    }
+}

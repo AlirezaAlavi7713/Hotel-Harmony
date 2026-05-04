@@ -1,0 +1,122 @@
+.bookingBar__datepicker {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  border-radius: 14px;
+  border: 1px solid #e3d6c7;
+  font-size: 15px;
+  outline: none;
+  background: #fffdf8;
+  color: #1c1712;
+  cursor: pointer;
+  font-family: inherit;
+}
+.bookingBar__datepicker:focus {
+  border-color: #b68a52;
+  box-shadow: 0 0 0 4px rgba(182, 138, 82, 0.12);
+}
+.bookingBar__datepicker::placeholder {
+  color: #b0a090;
+}
+
+/* ── Calendrier ── */
+.bookingBar__calendar {
+  font-family: inherit !important;
+  border: 1px solid rgba(182, 138, 82, 0.2) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 60px rgba(44, 31, 17, 0.18) !important;
+  background: #fffdf8 !important;
+  padding: 8px !important;
+  overflow: hidden;
+}
+
+/* Header (mois/année + flèches) */
+.bookingBar__calendar .react-datepicker__header {
+  background: #fffdf8 !important;
+  border-bottom: 1px solid rgba(182, 138, 82, 0.15) !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 14px 0 10px !important;
+}
+.bookingBar__calendar .react-datepicker__current-month {
+  color: #1c1712 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.bookingBar__calendar .react-datepicker__navigation-icon::before {
+  border-color: #b68a52 !important;
+}
+.bookingBar__calendar .react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: #8e6738 !important;
+}
+
+/* Jours de la semaine */
+.bookingBar__calendar .react-datepicker__day-name {
+  color: #b68a52 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 36px !important;
+  line-height: 36px !important;
+}
+
+/* Jours */
+.bookingBar__calendar .react-datepicker__day {
+  color: #1c1712 !important;
+  width: 36px !important;
+  line-height: 36px !important;
+  border-radius: 50% !important;
+  font-size: 14px !important;
+  transition: background 0.15s, color 0.15s !important;
+}
+.bookingBar__calendar .react-datepicker__day:hover {
+  background: rgba(182, 138, 82, 0.15) !important;
+  color: #8e6738 !important;
+}
+
+/* Jour sélectionné */
+.bookingBar__calendar .react-datepicker__day--selected,
+.bookingBar__calendar .react-datepicker__day--range-start,
+.bookingBar__calendar .react-datepicker__day--range-end {
+  background: #b68a52 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* Plage entre les deux dates */
+.bookingBar__calendar .react-datepicker__day--in-range {
+  background: rgba(182, 138, 82, 0.12) !important;
+  color: #8e6738 !important;
+  border-radius: 0 !important;
+}
+.bookingBar__calendar .react-datepicker__day--range-start {
+  border-radius: 50% 0 0 50% !important;
+}
+.bookingBar__calendar .react-datepicker__day--range-end {
+  border-radius: 0 50% 50% 0 !important;
+}
+
+/* Jours désactivés */
+.bookingBar__calendar .react-datepicker__day--disabled {
+  color: #ccc0b0 !important;
+  cursor: not-allowed !important;
+}
+.bookingBar__calendar .react-datepicker__day--disabled:hover {
+  background: transparent !important;
+}
+
+/* Aujourd'hui */
+.bookingBar__calendar .react-datepicker__day--today {
+  font-weight: 700 !important;
+  color: #b68a52 !important;
+}
+.bookingBar__calendar .react-datepicker__day--today.react-datepicker__day--selected {
+  color: #fff !important;
+}
+
+/* Triangle pointer supprimé */
+.bookingBar__calendar .react-datepicker__triangle {
+  display: none !important;
+}
