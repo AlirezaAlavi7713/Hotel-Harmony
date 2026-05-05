@@ -8,6 +8,7 @@ import {
     getPhotosByRoomId,
     replacePhotosByRoomId
 } from "../model/PhotoChambreModel.js";
+import cloudinary from "../config/cloudinary.js";
 
 // Ajouter une photo
 export const createPhotoController = async (req, res) => {
@@ -123,15 +124,22 @@ export const uploadRoomPhotosController = async (req, res) => {
   try {
     const files = Array.isArray(req.files) ? req.files : [];
 
-    const photos = files.map((file) => ({
-      filename: file.filename,
-      url_photo: `/uploads/${file.filename}`,
-    }));
+    const photos = await Promise.all(
+      files.map((file) =>
+        new Promise((resolve, reject) => {
+          const stream = cloudinary.uploader.upload_stream(
+            { folder: "hotel-harmony" },
+            (error, result) => {
+              if (error) return reject(error);
+              resolve({ filename: result.public_id, url_photo: result.secure_url });
+            }
+          );
+          stream.end(file.buffer);
+        })
+      )
+    );
 
-    return res.status(201).json({
-      message: "Photos uploadées !",
-      photos,
-    });
+    return res.status(201).json({ message: "Photos uploadées !", photos });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ message: "Erreur serveur" });
