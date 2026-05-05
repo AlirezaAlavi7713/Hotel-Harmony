@@ -134,6 +134,12 @@
     outline: none;
 }
 
+.auth__input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .auth__input {
     width: 95%;
     padding: 12px 12px;
@@ -146,6 +152,17 @@
 
 .auth__input:focus {
     border-color: #9ca3af;
+}
+
+.auth__eye {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1;
 }
 
 .auth__hint {

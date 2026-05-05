@@ -12,6 +12,7 @@ export default function Auth() {
 
     const [mode, setMode] = useState("login"); // "login" | "register"
     const isLogin = mode === "login";
+    const [showPassword, setShowPassword] = useState(false);
 
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
@@ -211,15 +212,25 @@ export default function Auth() {
                             <label className="auth__label" htmlFor="password">
                                 Password
                             </label>
-                            <input
-                                className="auth__input"
-                                id="password"
-                                name="password"
-                                type="password"
-                                autoComplete={isLogin ? "current-password" : "new-password"}
-                                required
-                                minLength={6}
-                            />
+                            <div className="auth__input-wrap">
+                                <input
+                                    className="auth__input"
+                                    id="password"
+                                    name="password"
+                                    type={showPassword ? "text" : "password"}
+                                    autoComplete={isLogin ? "current-password" : "new-password"}
+                                    required
+                                    minLength={6}
+                                />
+                                <button
+                                    type="button"
+                                    className="auth__eye"
+                                    onClick={() => setShowPassword((v) => !v)}
+                                    aria-label={showPassword ? "Masquer" : "Afficher"}
+                                >
+                                    {showPassword ? "🙈" : "👁️"}
+                                </button>
+                            </div>
                         </div>
 
                         {!isLogin && (
