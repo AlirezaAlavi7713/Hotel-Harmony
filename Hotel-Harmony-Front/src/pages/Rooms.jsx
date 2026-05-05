@@ -139,20 +139,26 @@ export default function Rooms() {
                                         </p>
 
                                         <div className="rooms__badges">
-                                            {FIXED_SERVICES.map((service) => {
-                                                const isAvailable = getIncludedServices(
-                                                    room.type || room.type_chambre
-                                                ).includes(service);
-
-                                                return (
-                                                    <span
-                                                        className={`rooms__badge ${isAvailable ? "" : "rooms__badge--soft"}`}
-                                                        key={service}
-                                                    >
+                                            {room.services
+                                                ? room.services.split(", ").map((service) => (
+                                                    <span className="rooms__badge" key={service}>
                                                         {service}
                                                     </span>
-                                                );
-                                            })}
+                                                ))
+                                                : FIXED_SERVICES.map((service) => {
+                                                    const isAvailable = getIncludedServices(
+                                                        room.type || room.type_chambre
+                                                    ).includes(service);
+                                                    return (
+                                                        <span
+                                                            className={`rooms__badge ${isAvailable ? "" : "rooms__badge--soft"}`}
+                                                            key={service}
+                                                        >
+                                                            {service}
+                                                        </span>
+                                                    );
+                                                })
+                                            }
                                         </div>
 
                                         <div className="rooms__footer">
