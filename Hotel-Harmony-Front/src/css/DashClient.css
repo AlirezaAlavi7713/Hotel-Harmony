@@ -1,5 +1,6 @@
 .dash {
   background: #ffffff;
+  min-height: 100vh;
   padding: clamp(18px, 3vw, 34px) 0;
 }
 
