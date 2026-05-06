@@ -43,3 +43,8 @@ img {
 a {
   color: inherit;
 }
+
+.dash, .staff, .staffRooms, .staffMessages, .emp {
+  background: #ffffff;
+  min-height: 100vh;
+}
