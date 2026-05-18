@@ -8,7 +8,7 @@ import { buildMediaUrl } from "../utils/media";
 export default function ReservationDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const role = localStorage.getItem("role");
+  const role = sessionStorage.getItem("role");
 
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);

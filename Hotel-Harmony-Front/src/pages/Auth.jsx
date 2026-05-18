@@ -42,16 +42,16 @@ export default function Auth() {
                 }
 
                 // stocker token
-                localStorage.setItem("token", res.token);
+                sessionStorage.setItem("token", res.token);
 
                 // Redirection selon le type
                 if (res.type === "staff") {
                     // role = "admin" ou "employe"
-                    localStorage.setItem("role", res.role);
-                    localStorage.setItem("staffId", String(res.id_employe));
+                    sessionStorage.setItem("role", res.role);
+                    sessionStorage.setItem("staffId", String(res.id_employe));
                     navigate("/staff");
                 } else {
-                    localStorage.setItem("role", "client");
+                    sessionStorage.setItem("role", "client");
                     navigate("/dashboard");
                 }
             } else {

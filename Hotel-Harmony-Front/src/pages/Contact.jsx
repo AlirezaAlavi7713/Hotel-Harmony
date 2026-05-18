@@ -55,6 +55,7 @@ export default function Contact() {
 
             setForm({ nom: "", email: "", sujet: "", message: "" });
             window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => setStatus((p) => ({ ...p, success: "" })), 3000);
         } catch (err) {
             const msg =
                 err?.response?.data?.message ||
@@ -63,6 +64,7 @@ export default function Contact() {
 
             setStatus({ loading: false, error: msg, success: "" });
             window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => setStatus((p) => ({ ...p, error: "" })), 4000);
         }
     }
 

@@ -7,7 +7,7 @@ import StaffMenu from "../components/StaffMenu";
 
 export default function DashStaff() {
     const navigate = useNavigate();
-    const role = localStorage.getItem("role"); // admin/employe
+    const role = sessionStorage.getItem("role"); // admin/employe
 
     const [reservations, setReservations] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -30,10 +30,10 @@ export default function DashStaff() {
 
     // cette fonction sert pour quand le back repond 401 (token invalide ou expiré) donc le front vide la session et envoievers le front
     function kickToAuth() {
-        localStorage.removeItem("token");
-        localStorage.removeItem("role");
-        localStorage.removeItem("clientId");
-        localStorage.removeItem("staffId");
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("role");
+        sessionStorage.removeItem("clientId");
+        sessionStorage.removeItem("staffId");
         navigate("/auth");
     }
 

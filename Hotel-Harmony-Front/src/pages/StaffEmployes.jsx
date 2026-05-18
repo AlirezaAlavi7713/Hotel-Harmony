@@ -8,7 +8,7 @@ import "../css/StaffEmployes.css";
 
 export default function StaffEmployees() {
     const navigate = useNavigate();
-    const role = localStorage.getItem("role");
+    const role = sessionStorage.getItem("role");
 
     useEffect(() => {
         if (role !== "admin") navigate("/staff", { replace: true });

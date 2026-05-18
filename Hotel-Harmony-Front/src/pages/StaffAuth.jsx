@@ -25,9 +25,9 @@ export default function StaffAuth() {
       const res = await EmployeService.login(payload);
 
       // stocker exactement comme client
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("role", res.data.role); // "employe" ou "admin"
-      localStorage.setItem("staffId", res.data.id_employe);
+      sessionStorage.setItem("token", res.data.token);
+      sessionStorage.setItem("role", res.data.role); // "employe" ou "admin"
+      sessionStorage.setItem("staffId", res.data.id_employe);
 
       navigate("/staff");
     } catch (err) {

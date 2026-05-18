@@ -14,7 +14,7 @@ const replaceRoomPhotos = (id_chambre, photos) => {
   return axios.put(
     API + `/chambres/${id_chambre}/photos`,
     { photos },
-    { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+    { headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` } }
   );
 };
 
@@ -30,7 +30,7 @@ const uploadRoomPhotos = (id_chambre, files) => {
     formData,
     {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
       },
     }
   );

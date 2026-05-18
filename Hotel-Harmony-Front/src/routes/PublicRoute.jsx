@@ -1,8 +1,8 @@
 import { Navigate } from "react-router-dom";
 
 export default function PublicRoute({ children }) {
-  const token = localStorage.getItem("token");
-  const role = localStorage.getItem("role");
+  const token = sessionStorage.getItem("token");
+  const role = sessionStorage.getItem("role");
 
   // pas connecté => on laisse accéder à /auth
   if (!token) return children;

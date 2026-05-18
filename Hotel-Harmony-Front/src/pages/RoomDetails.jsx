@@ -112,7 +112,7 @@ export default function RoomDetails() {
         e.preventDefault();
         setMessage("");
 
-        const token = localStorage.getItem("token");
+        const token = sessionStorage.getItem("token");
         if (!token) {
             setMessageType("error");
             setMessage("You must be logged in to make a reservation.");

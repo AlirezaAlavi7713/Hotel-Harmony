@@ -7,8 +7,8 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
 
-    const token = localStorage.getItem("token");
-    const role = localStorage.getItem("role"); // "client" | "employe" | "admin" | null
+    const token = sessionStorage.getItem("token");
+    const role = sessionStorage.getItem("role"); // "client" | "employe" | "admin" | null
     const isLogged = !!token;
 
     function closeMenu() {
@@ -16,10 +16,10 @@ export default function Navbar() {
     }
 
     function handleLogout() {
-        localStorage.removeItem("token");
-        localStorage.removeItem("role");
-        localStorage.removeItem("clientId");
-        localStorage.removeItem("staffId");
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("role");
+        sessionStorage.removeItem("clientId");
+        sessionStorage.removeItem("staffId");
         closeMenu();
         navigate("/auth");
     }

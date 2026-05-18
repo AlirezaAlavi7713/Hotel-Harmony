@@ -3,7 +3,7 @@ import axios from "axios";
 const API = import.meta.env.VITE_URL_API;
 
 const authHeader = () => ({
-  headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+  headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` },
 });
 
 /* ===== PUBLIC ===== */

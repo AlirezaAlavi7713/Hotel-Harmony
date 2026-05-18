@@ -4,7 +4,7 @@ const API = import.meta.env.VITE_URL_API;
 
 // Helpers (même style, juste pour éviter de répéter)
 const authHeader = () => ({
-  headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+  headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` },
 });
 
 const createClient = (client) => {

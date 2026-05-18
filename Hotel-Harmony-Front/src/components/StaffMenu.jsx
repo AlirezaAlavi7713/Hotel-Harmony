@@ -5,7 +5,7 @@ import "../css/StaffMenu.css";
 export default function StaffMenu() {
     const navigate = useNavigate();
     const location = useLocation();
-    const role = localStorage.getItem("role");
+    const role = sessionStorage.getItem("role");
 
     const [open, setOpen] = useState(false);
 

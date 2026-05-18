@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import "./css/Modal.css";
 import "./css/Global.css";
@@ -48,6 +49,16 @@ function Layout() {
 }
 
 export default function App() {
+  useEffect(() => {
+    const navType = performance.getEntriesByType("navigation")[0]?.type;
+    if (navType !== "reload" && navType !== "back_forward") {
+      sessionStorage.removeItem("token");
+      sessionStorage.removeItem("role");
+      sessionStorage.removeItem("staffId");
+      sessionStorage.removeItem("clientId");
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <Layout />
