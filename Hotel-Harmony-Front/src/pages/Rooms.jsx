@@ -119,7 +119,7 @@ export default function Rooms() {
                                             <div>
                                                 <p className="rooms__type">{room.type || room.type_chambre || "Premium room"}</p>
                                                 <p className="rooms__name">
-                                                    {room.nom || room.name || getRoomCopy(room.type || room.type_chambre).title || `Room ${room.numero}`}
+                                                    Room {room.numero}
                                                 </p>
                                             </div>
 
