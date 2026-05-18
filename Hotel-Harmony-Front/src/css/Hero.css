@@ -128,32 +128,53 @@
 
 @media (max-width: 767px) {
   .hero {
-    padding: 12px 12px 24px;
+    padding: 10px 10px 20px;
   }
 
   .hero__frame {
-    border-radius: 22px;
-    min-height: 540px;
+    border-radius: 18px;
+    min-height: 480px;
   }
 
   .hero__content {
     align-items: flex-end;
-    padding: 18px;
+    padding: 12px;
   }
 
   .hero__panel {
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 14px;
+    padding: 14px 16px;
+    animation: none;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 8px;
+    font-size: 11px;
   }
 
   .hero__title {
-    font-size: clamp(30px, 10vw, 42px);
+    font-size: clamp(18px, 6vw, 26px);
+    line-height: 1.1;
+  }
+
+  .hero__subtitle {
+    display: none;
+  }
+
+  .hero__meta {
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .hero__meta span {
+    padding: 6px 10px;
+    font-size: 11px;
   }
 
   .hero__bookingWrap {
     position: static;
     transform: none;
     width: min(560px, 92%);
-    margin: 18px auto 0;
+    margin: 14px auto 0;
   }
 }
