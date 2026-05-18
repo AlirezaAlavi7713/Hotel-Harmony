@@ -50,6 +50,11 @@ function Layout() {
 
 export default function App() {
   useEffect(() => {
+    const stripeReturn = localStorage.getItem("stripe_redirect");
+    if (stripeReturn) {
+      localStorage.removeItem("stripe_redirect");
+      return;
+    }
     const navType = performance.getEntriesByType("navigation")[0]?.type;
     if (navType !== "reload" && navType !== "back_forward") {
       sessionStorage.removeItem("token");

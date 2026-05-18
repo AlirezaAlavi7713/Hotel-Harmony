@@ -108,7 +108,8 @@ export default function Payment() {
         setError("");
 
         try {
-            window.location.assign(payment.checkout_url);
+            localStorage.setItem("stripe_redirect", "1");
+        window.location.assign(payment.checkout_url);
         } catch (err) {
             const msg =
                 err?.response?.data?.message ||
